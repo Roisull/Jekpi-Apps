@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/containerOnBoarding"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/default_background">
+    <ImageView
+        android:id="@+id/ivOnBoarding"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_easy_write_ills"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.33"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivOnBoarding"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        >
+
+        <TextView
+            android:id="@+id/tvTitleOnBoarding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:text="Kemudahan Menulis"
+            android:textSize="16sp"
+            android:textColor="@color/default_font"
+            />
+        <TextView
+            android:id="@+id/tvDescOnBoarding"
+            android:layout_width="288dp"
+            android:layout_height="wrap_content"
+            android:text="@string/lorem"
+            android:textAlignment="center"
+            android:textSize="13sp"
+            android:fontFamily="@font/poppins_light"
+            android:layout_marginTop="10dp"
+            />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Jekpi</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="dummy_name">Hi, Leonardo Edw!</string>
+    <string name="dummy_selamat_datang">Selamat Datang</string>
+    <string name="cari_catatan">Cari Catatan</string>
+    <string name="selamat_datang_di_jekpi">Selamat Datang, di Jekpi</string>
+    <string name="tutorial">Tutorial</string>
+    <string name="abaikan">Abaikan</string>
+    <string name="semua_catatan">Semua Catatan</string>
+</resources>

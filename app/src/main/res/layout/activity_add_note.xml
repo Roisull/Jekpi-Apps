@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    android:background="@color/default_background"
+    tools:context=".view.activity.crudNote.AddNoteActivity">
+
+    <ImageView
+        android:id="@+id/ivBackFromActivityAddNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        tools:ignore="ContentDescription" />
+    <ImageView
+        android:id="@+id/ivSaveNoteActivityAddNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_check"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        tools:ignore="ContentDescription"
+        />
+    <TextView
+        android:id="@+id/tvDateTimeActivityAddNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dd EEEE yyyy"
+        app:layout_constraintTop_toBottomOf="@+id/etAddTitleFragmentAddNote"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/default_font"
+        android:textSize="12sp"
+        />
+    <EditText
+        android:id="@+id/etAddTitleFragmentAddNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Add Title"
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivBackFromActivityAddNote"
+        android:background="@drawable/bg_add_title_fragment_add_note"
+        android:padding="15dp"
+        android:textColorHint="@color/dark_grey"
+        android:textColor="@color/brand_primary"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        />
+    <EditText
+        android:id="@+id/etAddContentNoteActivityAddNote"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:hint="type something"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDateTimeActivityAddNote"
+        android:background="@drawable/background_transparant"
+        android:gravity="top"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:textSize="12sp"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/default_font"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

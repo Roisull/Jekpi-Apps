@@ -1,0 +1,31 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Jekpi" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/brand_primary</item>
+    </style>
+
+    <style name="Theme.Jekpi" parent="Base.Theme.Jekpi" />
+
+    <style name="fab_style" parent="Widget.MaterialComponents.FloatingActionButton">
+        <!-- Atur warna latar belakang sesuai keinginan Anda -->
+        <item name="backgroundTint">@color/brand_primary</item>
+        <!-- Atur warna ikon pada floating button -->
+        <item name="tint">@color/white</item>
+        <!-- Atur ukuran floating button -->
+        <item name="fabSize">normal</item>
+        <!-- Atur efek bayangan saat floating button ditekan -->
+        <item name="pressedTranslationZ">8dp</item>
+    </style>
+
+    <style name="bottomNavStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <!-- Atur warna latar belakang -->
+        <item name="backgroundColor">@color/white</item>
+        <item name="shapeAppearanceOverlay">@style/bottomNavStyleAppearanceOverlay</item>
+    </style>
+    <style name="bottomNavStyleAppearanceOverlay" parent="">
+        <item name="cornerSizeTopLeft">@dimen/bottom_nav_corner_radius</item>
+        <item name="cornerSizeTopRight">@dimen/bottom_nav_corner_radius</item>
+    </style>
+</resources>

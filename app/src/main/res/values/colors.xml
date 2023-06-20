@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!--  Color Custom  -->
+    <color name="default_background">#F6F9FF</color>
+    <color name="default_font">#404040</color>
+    <color name="brand_primary">#4C6687</color>
+    <color name="line_stroke">#DDE5E9</color>
+    <color name="disable_icon">#D4DFFF</color>
+    <color name="dark_grey">#BFBFBF</color>
+    <color name="subtle_blue">#E4EAFC</color>
+</resources>
