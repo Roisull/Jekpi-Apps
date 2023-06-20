@@ -9,6 +9,7 @@
     tools:context=".view.activity.note.AllNoteActivity">
 
     <ImageView
+        android:id="@+id/ivArrowBackFromAllNote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_arrow_back"
@@ -16,6 +17,42 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintHorizontal_bias="0"
+        />
+
+    <TextView
+        android:id="@+id/tvTitleSemuaCatatanActivityAllNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Semua Catatan"
+        android:textSize="18sp"
+        android:textColor="@color/default_font"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivArrowBackFromAllNote" />
+    <TextView
+        android:id="@+id/tvTotalSemuaCatatanActivityAllNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="73 Catatan"
+        android:textColor="@color/dark_grey"
+        android:fontFamily="@font/poppins"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleSemuaCatatanActivityAllNote"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAllNoteActivityAllNote"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotalSemuaCatatanActivityAllNote"
+        tools:listitem="@layout/card_content"
+        app:spanCount="2"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,6 @@
 package com.isulin.jekpi.view.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -14,6 +15,7 @@ import com.isulin.jekpi.R
 import com.isulin.jekpi.adapter.NoteDataAdapter
 import com.isulin.jekpi.data.dummy.NoteContentDummy
 import com.isulin.jekpi.databinding.FragmentHomeBinding
+import com.isulin.jekpi.view.activity.note.AllNoteActivity
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
@@ -40,6 +42,10 @@ class HomeFragment : Fragment() {
 //            // Ubah gambar di sini setelah ImageView diklik
 //            ivIconFavorite.setImageResource(R.drawable.ic_false_love)
 //        }
+        binding.ivMoreFragmentHome.setOnClickListener {
+            val intent = Intent(requireContext(), AllNoteActivity::class.java)
+            startActivity(intent)
+        }
         return view
     }
 }
