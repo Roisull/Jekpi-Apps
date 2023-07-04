@@ -19,6 +19,10 @@ class AllNoteActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        binding.ivArrowBackFromAllNote.setOnClickListener {
+            onBackPressed()
+        }
+
         adapter = NoteDataAdapter()
         adapter.addList(NoteContentDummy.listNote)
         val lyManager = GridLayoutManager(this,2)

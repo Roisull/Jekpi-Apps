@@ -10,4 +10,5 @@
     <string name="tutorial">Tutorial</string>
     <string name="abaikan">Abaikan</string>
     <string name="semua_catatan">Semua Catatan</string>
+    <string name="floatingbuttonforaddnote">FloatingButtonForAddNote</string>
 </resources>

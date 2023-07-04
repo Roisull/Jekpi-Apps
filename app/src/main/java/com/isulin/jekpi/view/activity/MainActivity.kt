@@ -11,6 +11,7 @@ import com.isulin.jekpi.view.activity.crudNote.AddNoteActivity
 import com.isulin.jekpi.view.fragment.AccountFragment
 import com.isulin.jekpi.view.fragment.FavoriteFragment
 import com.isulin.jekpi.view.fragment.HomeFragment
+import com.isulin.jekpi.view.fragment.LoginBiometrikFragment
 import com.isulin.jekpi.view.fragment.TrashFragment
 
 class MainActivity : AppCompatActivity() {
@@ -35,7 +36,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.iconFavorite ->{
-                    loadFragment(FavoriteFragment())
+                    loadFragment(LoginBiometrikFragment())
                     true
                 }
                 R.id.iconTrash ->{
