@@ -1,9 +1,11 @@
 package com.isulin.jekpi.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -27,6 +29,7 @@ class OnBoardingAdapter(private val context: Context, private val data: List<OnB
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_on_boarding,parent,false)
+
         return MyViewHolder(itemView)
     }
 

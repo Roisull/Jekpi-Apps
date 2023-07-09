@@ -47,130 +47,65 @@
         app:layout_constraintVertical_bias="0"
         android:layout_marginTop="50dp"
         >
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilNamaUserRegister"
+        <EditText
+            android:id="@+id/etNamaUser"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-            app:boxCornerRadiusBottomEnd="10dp"
-            app:boxCornerRadiusBottomStart="10dp"
-            app:boxCornerRadiusTopEnd="10dp"
-            app:boxCornerRadiusTopStart="10dp"
-            app:boxStrokeWidth="2dp"
+            android:layout_height="wrap_content"
+            android:padding="18dp"
+            android:background="@drawable/background_search_view"
+            android:hint="@string/cari_catatan"
+            android:fontFamily="@font/poppins_medium"
             android:textColorHint="@color/line_stroke"
-            app:boxStrokeColor="@color/line_stroke"
-            >
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/tietNamaUserRegister"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="Nama User"
-                android:inputType="text"
-                android:fontFamily="@font/poppins_medium"
-                android:textSize="12sp"
-                android:textColor="@color/default_font"
-                />
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilEmailRegister"
+            android:textSize="15sp"
+            tools:ignore="Autofill,TextFields" />
+        <EditText
+            android:id="@+id/etEmail"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-            app:boxCornerRadiusBottomEnd="10dp"
-            app:boxCornerRadiusBottomStart="10dp"
-            app:boxCornerRadiusTopEnd="10dp"
-            app:boxCornerRadiusTopStart="10dp"
-            android:layout_marginTop="7sp"
-            app:boxStrokeWidth="2dp"
+            android:layout_height="wrap_content"
+            android:padding="18dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/background_search_view"
+            android:hint="@string/cari_catatan"
+            android:fontFamily="@font/poppins_medium"
             android:textColorHint="@color/line_stroke"
-            app:boxStrokeColor="@color/line_stroke"
-            >
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/tietEmailRegister"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:inputType="text"
-                android:hint="Email"
-                android:fontFamily="@font/poppins_medium"
-                android:textSize="12sp"
-                android:textColor="@color/default_font"
-                />
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilPasswordRegister"
+            android:textSize="15sp"
+            tools:ignore="Autofill,TextFields" />
+        <EditText
+            android:id="@+id/etKataSandi"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-            app:boxCornerRadiusBottomEnd="10dp"
-            app:boxCornerRadiusBottomStart="10dp"
-            app:boxCornerRadiusTopEnd="10dp"
-            app:boxCornerRadiusTopStart="10dp"
-            android:layout_marginTop="7sp"
-            app:boxStrokeWidth="2dp"
+            android:layout_height="wrap_content"
+            android:padding="18dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/background_search_view"
+            android:hint="@string/cari_catatan"
+            android:fontFamily="@font/poppins_medium"
             android:textColorHint="@color/line_stroke"
-            app:boxStrokeColor="@color/line_stroke"
-            >
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/tietPasswordRegister"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:inputType="text"
-                android:hint="Kata Sandi"
-                android:fontFamily="@font/poppins_medium"
-                android:textSize="12sp"
-                android:textColor="@color/default_font"
-                />
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilConfirmPasswordRegister"
+            android:textSize="15sp"
+            tools:ignore="Autofill,TextFields" />
+        <EditText
+            android:id="@+id/etKonfirmKataSandi"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-            app:boxCornerRadiusBottomEnd="10dp"
-            app:boxCornerRadiusBottomStart="10dp"
-            app:boxCornerRadiusTopEnd="10dp"
-            app:boxCornerRadiusTopStart="10dp"
-            android:layout_marginTop="7sp"
-            app:boxStrokeWidth="2dp"
+            android:layout_height="wrap_content"
+            android:padding="18dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/background_search_view"
+            android:hint="@string/cari_catatan"
+            android:fontFamily="@font/poppins_medium"
             android:textColorHint="@color/line_stroke"
-            app:boxStrokeColor="@color/line_stroke"
-            >
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/tietConfirmPasswordRegister"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:inputType="text"
-                android:hint="Konfirmasi Kata Sandi"
-                android:fontFamily="@font/poppins_medium"
-                android:textSize="12sp"
-                android:textColor="@color/default_font"
-                />
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/tilPinRegister"
+            android:textSize="15sp"
+            tools:ignore="Autofill,TextFields" />
+        <EditText
+            android:id="@+id/etPin"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-            app:boxCornerRadiusBottomEnd="10dp"
-            app:boxCornerRadiusBottomStart="10dp"
-            app:boxCornerRadiusTopEnd="10dp"
-            app:boxCornerRadiusTopStart="10dp"
-            android:layout_marginTop="7sp"
-            app:boxStrokeWidth="2dp"
+            android:layout_height="wrap_content"
+            android:padding="18dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/background_search_view"
+            android:hint="@string/cari_catatan"
+            android:fontFamily="@font/poppins_medium"
             android:textColorHint="@color/line_stroke"
-            app:boxStrokeColor="@color/line_stroke"
-            >
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/tietPinRegister"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:inputType="text"
-                android:hint="PIN"
-                android:fontFamily="@font/poppins_medium"
-                android:textSize="12sp"
-                android:textColor="@color/default_font"
-                />
-        </com.google.android.material.textfield.TextInputLayout>
+            android:textSize="15sp"
+            tools:ignore="Autofill,TextFields" />
     </LinearLayout>
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnLanjutkanRegister"

@@ -50,6 +50,7 @@
     <com.airbnb.lottie.LottieAnimationView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:alpha="0"
         app:lottie_fileName="background_splash_jekpi.json"
         app:lottie_loop="false"
         app:lottie_autoPlay="true"

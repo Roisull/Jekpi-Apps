@@ -1,6 +1,7 @@
 package com.isulin.jekpi.view.activity.note
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
@@ -8,6 +9,8 @@ import com.isulin.jekpi.R
 import com.isulin.jekpi.adapter.NoteDataAdapter
 import com.isulin.jekpi.data.dummy.NoteContentDummy
 import com.isulin.jekpi.databinding.ActivityAllNoteBinding
+import com.isulin.jekpi.view.activity.AddNotedActivity
+import com.isulin.jekpi.view.activity.crudNote.AddNoteActivity
 
 class AllNoteActivity : AppCompatActivity() {
     private var _binding: ActivityAllNoteBinding? = null
@@ -21,6 +24,9 @@ class AllNoteActivity : AppCompatActivity() {
 
         binding.ivArrowBackFromAllNote.setOnClickListener {
             onBackPressed()
+        }
+        binding.fabAddNoted.setOnClickListener {
+            startActivity(Intent(this, AddNotedActivity::class.java))
         }
 
         adapter = NoteDataAdapter()

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.isulin.jekpi.R
 import com.isulin.jekpi.databinding.ActivityMainBinding
 import com.isulin.jekpi.view.activity.crudNote.AddNoteActivity
@@ -16,8 +17,7 @@ import com.isulin.jekpi.view.fragment.TrashFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-
-    private val REQUEST_CODE_ADD_NOTE = 1
+//    private lateinit var dialog: BottomSheetDialog
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.iconFavorite ->{
-                    loadFragment(LoginBiometrikFragment())
+                    loadFragment(FavoriteFragment())
                     true
                 }
                 R.id.iconTrash ->{
@@ -53,11 +53,8 @@ class MainActivity : AppCompatActivity() {
     //  END FOR BOTTOM NAVIGATION
 
     // FOR NAVIGATE TO ADD NOTE ACTIVITY
-        binding.fabBottomNav.setOnClickListener {
-            startActivityForResult(
-                Intent(applicationContext, AddNoteActivity::class.java),
-                REQUEST_CODE_ADD_NOTE
-            )
+        binding.fabAddNotedFromMain.setOnClickListener {
+            startActivity(Intent(this, AddNotedActivity::class.java))
         }
     // FOR NAVIGATE TO ADD NOTE ACTIVITY
     }
@@ -67,4 +64,10 @@ class MainActivity : AppCompatActivity() {
         transaction.replace(R.id.flContainerMain, fragment)
         transaction.commit()
     }
+//    private fun showDialogFilter(){
+//        val dialogView = layoutInflater.inflate(R.layout.filter_dialog, null)
+//        dialog = BottomSheetDialog(this,R.style.FilterBottomSheetDialog)
+//        dialog.setContentView(dialogView)
+//        dialog.show()
+//    }
 }

@@ -13,6 +13,18 @@
         android:theme="@style/Theme.Jekpi"
         tools:targetApi="31">
         <activity
+            android:name=".view.activity.AddNotedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activity.LastOnBoardingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activity.SearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activity.LoginRegisActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.activity.note.AllNoteActivity"
             android:exported="false" />
         <activity

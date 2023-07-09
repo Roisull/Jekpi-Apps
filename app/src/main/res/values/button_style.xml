@@ -6,7 +6,6 @@
         <item name="colorOutline">@color/brand_primary</item>
         <!-- Ganti warna teks dengan warna yang diinginkan -->
     </style>
-
 <!--    <drawable name="button_background">-->
 <!--        <shape>-->
 <!--            <solid android:color="#00000000" />-->

@@ -11,16 +11,20 @@ import android.widget.GridLayout
 import android.widget.ImageView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.GridLayoutManager
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.isulin.jekpi.R
 import com.isulin.jekpi.adapter.NoteDataAdapter
 import com.isulin.jekpi.data.dummy.NoteContentDummy
 import com.isulin.jekpi.databinding.FragmentHomeBinding
+import com.isulin.jekpi.view.activity.SearchActivity
 import com.isulin.jekpi.view.activity.note.AllNoteActivity
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
     lateinit var adapter: NoteDataAdapter
+
+    private lateinit var dialog: BottomSheetDialog
 
 //    private lateinit var ivIconFavorite: ImageView
     override fun onCreateView(
@@ -30,6 +34,10 @@ class HomeFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val view = binding.root
+        binding.etSearchNote.setOnClickListener {
+            val intent = Intent(requireContext(), SearchActivity::class.java)
+            startActivity(intent)
+        }
 
         adapter = NoteDataAdapter()
         adapter.addList(NoteContentDummy.listNote)
@@ -46,6 +54,16 @@ class HomeFragment : Fragment() {
             val intent = Intent(requireContext(), AllNoteActivity::class.java)
             startActivity(intent)
         }
+        binding.ivFilterIconFragmentHome.setOnClickListener {
+            showDialogFilter()
+        }
+
         return view
+    }
+    private fun showDialogFilter(){
+        val dialogView = layoutInflater.inflate(R.layout.filter_dialog, null)
+        dialog = BottomSheetDialog(requireContext(),R.style.FilterBottomSheetDialog)
+        dialog.setContentView(dialogView)
+        dialog.show()
     }
 }

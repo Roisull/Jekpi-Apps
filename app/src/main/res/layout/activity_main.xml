@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/default_background"
     tools:context=".view.activity.MainActivity">
 
     <FrameLayout
@@ -55,6 +54,7 @@
         android:layout_marginBottom="48dp"
         >
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAddNotedFromMain"
             style="@style/fab_style"
             android:layout_width="70dp"
             android:layout_height="70dp"

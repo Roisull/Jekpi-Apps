@@ -59,6 +59,7 @@
         app:layout_constraintVertical_bias="0"
         tools:ignore="UselessLeaf">
         <EditText
+            android:id="@+id/etSearchNote"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="50dp"

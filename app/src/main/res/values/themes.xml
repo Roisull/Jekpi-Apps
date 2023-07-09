@@ -28,4 +28,12 @@
         <item name="cornerSizeTopLeft">@dimen/bottom_nav_corner_radius</item>
         <item name="cornerSizeTopRight">@dimen/bottom_nav_corner_radius</item>
     </style>
+    
+    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    
+    <style name="FilterBottomSheetDialog" parent="Theme.Design.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+    </style>
 </resources>

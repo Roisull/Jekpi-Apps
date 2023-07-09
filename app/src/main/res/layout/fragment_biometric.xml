@@ -62,6 +62,7 @@
             />
     </LinearLayout>
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDaftarSidikJari"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         app:layout_constraintBottom_toBottomOf="parent"
