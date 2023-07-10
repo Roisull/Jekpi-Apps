@@ -8,16 +8,47 @@ import com.isulin.jekpi.databinding.CardContentBinding
 import com.isulin.jekpi.model.NoteModel
 
 class NoteDataAdapter: RecyclerView.Adapter<ViewHolder>() {
+
+    private lateinit var mListener: onItemClickListener
+    interface onItemClickListener{
+        fun onItemClick(position: Int)
+    }
+
+    fun setOnItemClickListener(listener: onItemClickListener){
+        mListener = listener
+    }
+
     var listData = mutableListOf<NoteModel>()
     var viewType = 0
-    class Holder(val binding: CardContentBinding): RecyclerView.ViewHolder(binding.root){
+    inner class Holder(val binding: CardContentBinding):
+        RecyclerView.ViewHolder(binding.root){
+
+        init {
+            binding.root.setOnClickListener {
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION){
+                    mListener.onItemClick(position)
+                }
+            }
+        }
+
         fun bindView(data : NoteModel){
             binding.tvTitleCardContent.text = data.title
             binding.tvContentCardContent.text = data.content
             binding.tvDateTimeCardContent.text = data.date
         }
     }
-    class HeaderHolder(val binding: CardContentBinding): RecyclerView.ViewHolder(binding.root){
+    inner class HeaderHolder(val binding: CardContentBinding):
+        RecyclerView.ViewHolder(binding.root){
+
+        init {
+            binding.root.setOnClickListener {
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    mListener.onItemClick(position)
+                }
+            }
+        }
         fun bindView(data: NoteModel){
             binding.tvTitleCardContent.text = data.title
             binding.tvContentCardContent.text = data.content

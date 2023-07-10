@@ -18,8 +18,9 @@ import com.isulin.jekpi.data.dummy.NoteContentDummy
 import com.isulin.jekpi.databinding.FragmentHomeBinding
 import com.isulin.jekpi.view.activity.SearchActivity
 import com.isulin.jekpi.view.activity.note.AllNoteActivity
+import com.isulin.jekpi.view.activity.note.DetailNotedActivity
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(), NoteDataAdapter.onItemClickListener {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
     lateinit var adapter: NoteDataAdapter
@@ -41,6 +42,7 @@ class HomeFragment : Fragment() {
 
         adapter = NoteDataAdapter()
         adapter.addList(NoteContentDummy.listNote)
+        adapter.setOnItemClickListener(this)
         val lyManager = GridLayoutManager(requireContext(), 2)
         binding.rvForContentFragmentHome.layoutManager = lyManager
         binding.rvForContentFragmentHome.adapter = adapter
@@ -59,6 +61,18 @@ class HomeFragment : Fragment() {
         }
 
         return view
+    }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
+    override fun onItemClick(position: Int) {
+        val intent = Intent(requireContext(), DetailNotedActivity::class.java)
+        // Kirim data yang diperlukan ke DetailNoteActivity melalui intent jika diperlukan
+        // Misalnya, jika Anda perlu mengirim ID note yang diklik:
+        // intent.putExtra("note_id", NoteContentDummy.listNote[position].id)
+        startActivity(intent)
     }
     private fun showDialogFilter(){
         val dialogView = layoutInflater.inflate(R.layout.filter_dialog, null)

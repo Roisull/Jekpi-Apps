@@ -5,17 +5,90 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/default_background"
+    android:paddingStart="30dp"
+    android:paddingEnd="30dp"
+    android:paddingTop="50dp"
     tools:context=".view.fragment.TrashFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/llForTitleHapus"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Trash"
-        android:textSize="80sp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Baru Dihapus"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="18sp"
+            />
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ri_more_vertical"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/llForTitleHapus"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_card_favorite"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="kesan hari ini"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/default_font"
+            android:textSize="14sp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lorem ipsum dolor sit
+amet, consectetur
+adipiscing elit, sed do
+eiusmod tempor"
+            android:textColor="@color/default_font"
+            android:fontFamily="@font/poppins_light"
+            android:textSize="10sp"
+            />
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="29 Hari"
+                android:layout_weight="1"
+                android:textColor="@color/dark_grey"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="10sp"
+                />
+            <CheckBox
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:checked="false"
+                android:layout_gravity="center_vertical"
+                />
+        </LinearLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

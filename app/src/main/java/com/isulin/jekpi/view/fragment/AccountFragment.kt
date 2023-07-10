@@ -1,60 +1,47 @@
 package com.isulin.jekpi.view.fragment
 
+import android.annotation.SuppressLint
+import android.app.Notification
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
 import com.isulin.jekpi.R
+import com.isulin.jekpi.databinding.FragmentAccountBinding
+import com.isulin.jekpi.view.notification.BaseApplication
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [AccountFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class AccountFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
-
+    private var _binding: FragmentAccountBinding? = null
+    private val binding get() = _binding!!
+    private lateinit var notificationManager: NotificationManagerCompat
+    @SuppressLint("MissingPermission")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_account, container, false)
-    }
+        _binding = FragmentAccountBinding.inflate(inflater, container, false)
+        val view = binding.root
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment AccountFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            AccountFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+        notificationManager = NotificationManagerCompat.from(requireContext())
+
+        if (binding.scNotificationFragmentAccount.isChecked){
+            val title: String = "Jekpi - Jejak Pikiran"
+            val desc: String = "Hari ini kamu belum nulis loh, yuk buka aplikasimu!"
+            val builder = NotificationCompat.Builder(requireContext(), BaseApplication.CHANNEL_1_ID)
+                .setSmallIcon(R.drawable.jekpi_icon)
+                .setContentTitle(title)
+                .setContentText(desc)
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setCategory(NotificationCompat.CATEGORY_MESSAGE)
+
+            val notification: Notification = builder.build()
+            this.notificationManager.notify(1, notification)
+        }
+
+        return view
     }
 }
